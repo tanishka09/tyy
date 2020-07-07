@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>VC</title>
+    <style>
+    	.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 15%;
+}
+    </style>
+
+    <script>
+ 
+document.addEventListener('DOMContentLoaded', function () {
+    $('#audiobtn').on('click', function () {
+      $(this)
+        .find("i")
+        .toggleClass('fa-microphone-alt')
+        .toggleClass('fa-microphone-slash');
+        console.log("hii there");
+           });
+
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+    $('#vdbtn').on('click', function () {
+      $(this)
+        .find("i")
+        .toggleClass('fa-video')
+        .toggleClass(' fa-pause-circle');
+
+
+    });
+  });
+  
+  </script>
+    
+
+</head>
+<body >
+	<div class="container bg-dark text-white ">
+		<div class="vcb">
+    <div class="row border border-primary mx-auto bg-secondary">
+    	<div class="embed-responsive embed-responsive-16by9">
+    			<video class="embed-responsive-item" muted></video>
+    			<i class='fas fa-video p-4 fa-2x' ></i>
+    		</div>
+</div>
+</div>
+   
+<footer role="presentation" id="footer" class="overlay">
+	<div class="d-flex justify-content-center align-items-center container-fluid">
+	<div class="row  mx-auto">
+		<div class="join-member-container px-5">
+                <button tabindex="0" type="button"  class=" member" arial-label="member" >
+				<i class=" fa fa-users fa-2x"></i>
+				<span class="loading" style="display: none;"></span>
+			</button><br>
+			member
+         </div>
+
+         <div class="join-screen-container">
+			<button tabindex="0" type="button" id="screen" class="screen" arial-label="screen">
+				<i class='	fa fa-laptop fa-2x'></i>
+				<span class="loading" style="display: none;"></span>
+			</button><br>
+			Presents
+         </div>
+          
+         <div class=" join-audio-container px-5">
+			<button tabindex="0" type="button" id="audiobtn" class="audiobtn" arial-label="audio"  (click)="showFirst=!showFirst">
+        <i class='fa  fa-2x ' style='color:blue'></i>
+       
+        <i class='fas fa-microphone-alt fa-2x' *ngIf="showFirst" ></i>
+        <i class=' fa fa-microphone-slash fa-2x' *ngIf="!showFirst"></i>
+				</button><br>
+				audio
+         </div>
+         <div class="join-end-container ">
+			<a href="end.html"><button tabindex="0" type="button" class="end" arial-label="end">
+	            	<i class="fa fa-phone-slash  fa-2x" style='color:red'></i>
+				<span class="loading" style="display: none;"></span>
+			</button></a><br>
+			call end
+         </div>
+
+         <div class="join-video-container px-5">
+			<button tabindex="0" type="button" id="vdbtn" class="vdbtn" arial-label="audio" >
+         
+          
+			</button><br>
+			vedio
+         </div>
+         
+     
+</div>
+
+	</div>  
+</footer>
+
+
+
+</div>
+</body>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
